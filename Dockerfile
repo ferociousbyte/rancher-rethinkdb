@@ -3,8 +3,10 @@ MAINTAINER xkodiak
 
 RUN apt update && apt install -y curl
 
-COPY assets/run.sh /run.sh
+COPY assets/db.sh /db.sh
+COPY assets/proxy.sh /proxy.sh
 
-RUN chmod +x /run.sh 
+RUN chmod +x /db.sh 
+RUN chmod +x /proxy.sh 
 
-ENTRYPOINT [ "/run.sh" ]
+ENTRYPOINT [ "/db.sh" ]
