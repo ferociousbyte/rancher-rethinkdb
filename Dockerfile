@@ -1,4 +1,4 @@
-FROM rethinkdb:2.3.6
+FROM rethinkdb:2.4
 MAINTAINER xkodiak
 
 RUN apt update && apt install -y curl
